@@ -1,0 +1,44 @@
+.casilla {
+    background: #fff;
+    border: 1px solid #999;
+    float: left;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 34px;
+    height: 34px;
+    margin-right: -1px;
+    margin-top: -1px;
+    padding: 0;
+    text-align: center;
+    width: 34px;
+    cursor: pointer;
+}
+
+.reset{
+    background: #fff;
+    border: 1px solid #999;
+    float: left;
+    font-weight: bold;
+    line-height: 34px;
+    height: 34px;
+    margin-right: -1px;
+    margin-top: 5px;
+    padding: 0;
+    text-align: center;
+    width: 100px;
+    cursor: pointer;
+}
+
+.titulo {
+    margin-bottom: -5px;
+    font-weight: bold;
+    text-align: center ;
+}
+
+body {
+    display: grid;
+    margin: 0;
+    place-content: center;
+    min-height: 100vh;
+    font-family: system-ui;
+}
