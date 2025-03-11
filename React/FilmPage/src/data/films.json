@@ -1,0 +1,23 @@
+[
+    {
+        "Titulo": "Star Wars: Episodio I - La amenaza fantasma",
+        "Sinopsis": "Obi-Wan Kenobi es un joven aprendiz caballero Jedi bajo la tutela de Qui-Gon Jinn; Anakin Skywalker, quien después será padre de Luke Skywalker y se convertirá en Darth Vader, solamente es un niño de 9 años. Cuando la Federación de Comercio corta todas las rutas al planeta Naboo, Qui-Gon y Obi-Wan son asignados para solucionar el problema.",
+        "Director": "George Lucas",
+        "Año": "1999",
+        "ImagenPortada": "C:\\EpisodioI.jpg"
+    },
+    {
+        "Titulo": "Star Wars: Episodio II - El ataque de los clones",
+        "Sinopsis": "En el Senado Galáctico reina la inquietud. Varios miles de sistemas solares han declarado su intención de abandonar la República. La reina Amidala regresa al Senado para conseguir un ejército que ayude a los caballeros jedi.",
+        "Director": "George Lucas",
+        "Año": "2002",
+        "ImagenPortada": "C:\\EpisodioII.jpg"
+    },
+    {
+        "Titulo": "Star Wars: Episodio III - La venganza de los Sith",
+        "Sinopsis": "Seducido por el lado oscuro, Anakin Skywalker se rebela contra su mentor, Obi-Wan Kenobi, y se convierte en Darth Vader.",
+        "Director": "George Lucas",
+        "Año": "2005",
+        "ImagenPortada": "C:\\EpisodioIII.jpg"
+    }
+]

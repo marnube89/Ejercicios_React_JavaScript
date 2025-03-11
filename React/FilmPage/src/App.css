@@ -1,0 +1,200 @@
+/* formulario inicial */
+
+.group1 {
+  display: grid;
+}
+
+.group2 {
+  display: grid;
+}
+
+.formulario {
+  background-color: #2d2d2d;
+  padding: 15pt;
+  border: 2px solid;
+  border-radius: 10px;
+}
+
+.formulario label {
+  font-weight: 400;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.formulario input {
+  padding: 8pt;
+  width: 250pt;
+  border: 1px solid #2d2d2d;
+  border-radius: 5px;
+  font-family: inherit;
+}
+
+.formulario small {
+  color: #9a9a9a;
+  margin-bottom: 5pt;
+}
+
+.loginTittle {
+  margin-top: 5pt;
+  margin-bottom: 5pt;
+}
+
+.loginButton {
+  margin-top: 10pt;
+  background-color: #264c75;
+  width: 100%;
+}
+
+.loginBackground {
+  background-color: #2d2d2d58;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  place-content: center;
+  display: grid;
+  position: absolute;
+}
+
+
+/* lista de peliculas  */
+
+ul {
+  list-style-type: none;
+  margin: 0 auto;
+  text-align: center;
+  padding: 10pt;
+}
+
+li {
+  display: inline-block;
+}
+
+.card {
+  background-color: #222;
+  width: 16rem;
+  border-radius: 10px;
+  padding: 10pt;
+  border: #5e5e5e solid 2px;
+  margin: 10pt;
+  white-space: pre-wrap;
+}
+.card-title {
+  font-weight: 500;
+  font-size: large;
+  border-bottom: #5e5e5e solid 2px;
+  padding-bottom: 5pt;
+}
+
+img {
+  width: inherit;
+  height: inherit;
+  border-radius: 10px;
+}
+
+header {
+  background-color: #222;
+  margin: 0;
+  padding: 10pt;
+  display: flex;
+  margin-bottom: 20pt;
+  justify-content: space-between;
+}
+
+header button {
+  background-color: #656565;
+  margin: 5pt;
+}
+
+.peloto {
+  width: 30pt;
+  height: 30pt;
+  border-radius: 50%;
+  border: #656565 solid 2px;
+  background-color: #8d8c8c;
+  margin: 5pt;
+}
+
+.user {
+  display: flex;
+  margin: 0;
+  float: left;
+}
+
+.orderMenu {
+  padding: 10pt;
+  background-color: #313131;
+  border-radius: 10pt;
+  margin-left: 10%;
+  margin-right: 10%;
+  display: flex;
+}
+
+.orderMenu select{
+  margin-left: 10pt;
+  border-radius: 5pt;
+  padding: 5pt;
+  border: 0px;
+  background-color: #222;
+  cursor: pointer;
+  text-align: center;
+  font-size: medium;
+  font-weight: 500;
+  font-family: inherit;
+}
+
+.listBody {
+  display: grid;
+}
+
+/* Estilos del dialogo */
+.modal {
+  width: 100%;
+  height: 100%;
+  z-index: 1055;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+.modal-header {
+ justify-content: space-between;
+ background-color: #222;
+ padding: 20pt;
+ display: flex;
+ border-radius: 20px 20px 0px 0px;
+ font-weight: bold;
+ font-size: large;
+ border-bottom: #686868 solid 2px;
+}
+
+.modal-body {
+  padding: 20pt;
+}
+
+.modal-dialog {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100pt;
+  max-width: 500pt;
+  background-color: #181818;
+  border-radius: 20px;
+  border: #8182e8 solid 2px;
+}
+
+.modal-backdrop {
+  z-index: 1050;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: #3e3e3e6a;
+}
+.modal-close {
+  background-color: #313131 ;
+  margin-top: 15pt;
+}
+
+.modal p{
+  margin: 0;
+}
