@@ -59,12 +59,14 @@ function FilmModal(props: {filmDesc: string, filmTitle: string}){
 
 //Tarjeta de info de pelicula
 function FilmCard( props : { title: string; info: string; description: string }){
+  const [checked, setChecked] = useState(false)
   return (
     <Card>
       <Card.Img src={filmImage}/>
       <Card.Body>
         <Card.Title>{ props.title }</Card.Title>
         <Card.Text>{ props.info }</Card.Text>
+        <Form.Check onChange={() => setChecked(!checked)} checked={ checked }/>
         <FilmModal filmDesc={ props.description } filmTitle={ props.title }/>
       </Card.Body>
     </Card>
@@ -73,20 +75,12 @@ function FilmCard( props : { title: string; info: string; description: string })
 
 //Lista de tarjetas
 function CardList(props: { order: boolean; DATA: any[]}){
-  const cards = props.DATA.map(value => {
-    //El key indica al programa la clave de cada valor de una lista
-    return <li key= { value.release_date }>
-      <FilmCard 
-        title= { value.title } 
-        description= { value.opening_crawl } 
-        info= { `Director: ${value.director}\nFecha: ${value.release_date}` } 
-      />
-    </li>
-  })
-  let orderedCards = cards.slice()
+  let orderedFilms = props.order ? props.DATA.slice().sort((a, b) => Date.parse(a.release_date as string) - Date.parse(b.release_date as string)) : props.DATA.slice().sort((a, b) => Date.parse(b.release_date as string) - Date.parse(a.release_date as string))
 
   //El as string obliga a la variable a que se lea solo como string
-  props.order ? orderedCards.sort((a, b) => Date.parse(a.key as string) - Date.parse(b.key as string)) : orderedCards.sort((a, b) => Date.parse(b.key as string) - Date.parse(a.key as string))
+
+  //Ordenar antes de mapear los elementos
+  //props.order ? orderedCards.sort((a, b) => Date.parse(a.key as string) - Date.parse(b.key as string)) : orderedCards.sort((a, b) => Date.parse(b.key as string) - Date.parse(a.key as string))
 
 //Ver por no hacer esto
 
@@ -98,7 +92,18 @@ function CardList(props: { order: boolean; DATA: any[]}){
   //   cards.sort().reverse()
   // }
 
-  return (<ul>{ orderedCards }</ul>)
+  return (<ul>{ 
+    orderedFilms.map(film => {
+      //El key indica al programa la clave de cada valor de una lista
+      return <li key={film.episode_id}>
+        <FilmCard 
+          title= { film.title } 
+          description= { film.opening_crawl } 
+          info= { `Director: ${film.director}\nFecha: ${film.release_date}` } 
+        />
+      </li>
+    })
+    }</ul>)
 }
 
 export default function FilmPage(props: {logOut: () => void; username: string; data: any[]}){
