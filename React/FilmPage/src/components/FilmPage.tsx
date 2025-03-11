@@ -1,12 +1,12 @@
 import { useState } from 'react'
-import filmImage from '../assets/filmImage.jpeg'
 import Button from 'react-bootstrap/Button'
 import Form from 'react-bootstrap/Form'
 import Card from 'react-bootstrap/Card'
 import Modal from 'react-bootstrap/Modal';
 
-//import fetchData from '../data/dataAccess'
+import filmImage from '../assets/filmImage.jpeg'
 import '../App.css'
+
 
 //Usuario e icono de usuario
 function User(props: { username:string; }){
@@ -61,12 +61,10 @@ function FilmModal(props: {filmDesc: string, filmTitle: string}){
 function FilmCard( props : { title: string; info: string; description: string }){
   return (
     <Card>
-      <img src={filmImage}/>
+      <Card.Img src={filmImage}/>
       <Card.Body>
         <Card.Title>{ props.title }</Card.Title>
-        <Card.Text>
-          { props.info }
-        </Card.Text>
+        <Card.Text>{ props.info }</Card.Text>
         <FilmModal filmDesc={ props.description } filmTitle={ props.title }/>
       </Card.Body>
     </Card>
@@ -91,11 +89,6 @@ function CardList(props: { order: boolean; DATA: any[]}){
   props.order ? orderedCards.sort((a, b) => Date.parse(a.key as string) - Date.parse(b.key as string)) : orderedCards.sort((a, b) => Date.parse(b.key as string) - Date.parse(a.key as string))
 
 //Ver por no hacer esto
-
-//Posible respuesta:
-//Primero se podria resumir en una operacion ternaria como la de ariba
-//Segundo, aqui estamos mutando directamente el array original ademas de que no le estamos pasando un criterio de ordenacion
-//Tercero, el reverse no ordena con un criterio inverso, si no que le da la vuelta a todo el array
 
   // if(order){
   //   //Ascendente

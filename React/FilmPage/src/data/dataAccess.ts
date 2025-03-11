@@ -8,8 +8,9 @@ export function fetchData(){
 
 //Ejercicio 2
 export function fetchExternalData(){
-    const [data, setData] = useState(new Array())
+    const [data, setData] = useState(new Array<object>())
 
+    //Este useEfect se ejecuta una vez al montarse la web
     useEffect(() => {
         fetch('https://swapi.dev/api/films')
             .then(res => res.json())
