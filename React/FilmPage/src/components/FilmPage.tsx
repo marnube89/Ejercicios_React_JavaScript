@@ -5,6 +5,7 @@ import Card from 'react-bootstrap/Card'
 import Modal from 'react-bootstrap/Modal';
 
 import filmImage from '../assets/filmImage.jpeg'
+import { FilmData } from '../data/dataAccess';
 import '../App.css'
 
 
@@ -59,14 +60,12 @@ function FilmModal(props: {filmDesc: string, filmTitle: string}){
 
 //Tarjeta de info de pelicula
 function FilmCard( props : { title: string; info: string; description: string }){
-  const [checked, setChecked] = useState(false)
   return (
     <Card>
       <Card.Img src={filmImage}/>
       <Card.Body>
         <Card.Title>{ props.title }</Card.Title>
         <Card.Text>{ props.info }</Card.Text>
-        <Form.Check onChange={() => setChecked(!checked)} checked={ checked }/>
         <FilmModal filmDesc={ props.description } filmTitle={ props.title }/>
       </Card.Body>
     </Card>
@@ -74,23 +73,9 @@ function FilmCard( props : { title: string; info: string; description: string })
 }
 
 //Lista de tarjetas
-function CardList(props: { order: boolean; DATA: any[]}){
-  let orderedFilms = props.order ? props.DATA.slice().sort((a, b) => Date.parse(a.release_date as string) - Date.parse(b.release_date as string)) : props.DATA.slice().sort((a, b) => Date.parse(b.release_date as string) - Date.parse(a.release_date as string))
-
-  //El as string obliga a la variable a que se lea solo como string
-
+function CardList(props: { order: boolean; DATA: FilmData[]}){
   //Ordenar antes de mapear los elementos
-  //props.order ? orderedCards.sort((a, b) => Date.parse(a.key as string) - Date.parse(b.key as string)) : orderedCards.sort((a, b) => Date.parse(b.key as string) - Date.parse(a.key as string))
-
-//Ver por no hacer esto
-
-  // if(order){
-  //   //Ascendente
-  //   cards.sort()
-  // }else{
-  //   //Descendente
-  //   cards.sort().reverse()
-  // }
+  let orderedFilms = props.order ? props.DATA.slice().sort((a, b) => Date.parse(a.release_date as string) - Date.parse(b.release_date as string)) : props.DATA.slice().sort((a, b) => Date.parse(b.release_date as string) - Date.parse(a.release_date as string))
 
   return (<ul>{ 
     orderedFilms.map(film => {

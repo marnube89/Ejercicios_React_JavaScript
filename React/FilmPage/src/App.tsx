@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import FilmPage from './components/FilmPage';
 import LoginForm from './components/Login';
-import { fetchExternalData } from './data/dataAccess.ts'
+import { fetchExternalData, FilmData } from './data/dataAccess.ts'
 import './App.css'
 
 //Separar componentes
@@ -11,7 +11,7 @@ import './App.css'
 export default function App() {
   const [logged, setLogged] = useState(false);
   const [username, setUsername] = useState('') 
-  const DATA = fetchExternalData()
+  const DATA: Array<FilmData> = fetchExternalData()
   
   return (
     <main>
