@@ -1,24 +1,20 @@
 import { useState } from 'react'
 import FilmPage from './components/FilmPage';
 import LoginForm from './components/Login';
-import { fetchExternalData, FilmData } from './data/dataAccess.ts'
-import './App.css'
 
-//Separar componentes
-//Mirar error listas
+import './App.css'
 
 
 export default function App() {
-  const [logged, setLogged] = useState(false);
   const [username, setUsername] = useState('') 
-  const DATA: Array<FilmData> = fetchExternalData()
+  const logged = username.length > 0
   
   return (
     <main>
       {logged ? (
-        <FilmPage logOut={() => setLogged(false)} username={username} data={DATA}/>
+        <FilmPage logOut={() => setUsername('')} username={username}/>
         ) : (
-        <LoginForm logIn={() => setLogged(true)} getUser={(s:string) => setUsername(s)}/>
+        <LoginForm setUsername={setUsername}/>
         )}
     </main>
   )

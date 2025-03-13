@@ -3,11 +3,11 @@ import Button from 'react-bootstrap/Button'
 import Form from 'react-bootstrap/Form'
 import '../App.css'
 
-export default function LoginForm(props: {logIn: () => void; getUser: (name: string) => void;}){
+export default function LoginForm({setUsername}: {setUsername: (name: string) => void;}){
     const [user, setUser] = useState('');
     return (
         <div className='loginBackground'>
-            <Form className='formulario' onSubmit={() => {props.logIn(); props.getUser(user)}}>
+            <Form className='formulario' onSubmit={() => {setUsername(user)}}>
                 <h2 className='loginTittle'>Inicio de sesion</h2>
                 <Form.Group className='group1' controlId='user'>
                     <Form.Label>Usuario</Form.Label>
