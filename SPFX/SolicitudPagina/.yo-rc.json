@@ -1,0 +1,21 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "18.20.7",
+    "sdksVersions": {
+      "@microsoft/microsoft-graph-client": "3.0.2",
+      "@microsoft/teams-js": "2.24.0"
+    },
+    "version": "1.20.0",
+    "libraryName": "solicitud-pagina",
+    "libraryId": "02b8dfc4-f5a0-4b3e-a25d-6805f5ad37bf",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "solicitud-pagina",
+    "solutionShortDescription": "solicitud-pagina description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}

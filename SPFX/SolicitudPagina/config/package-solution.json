@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "solicitud-pagina-client-side-solution",
+    "id": "02b8dfc4-f5a0-4b3e-a25d-6805f5ad37bf",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.20.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "solicitud-pagina description"
+      },
+      "longDescription": {
+        "default": "solicitud-pagina description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "solicitud-pagina Feature",
+        "description": "The feature that activates elements of the solicitud-pagina solution.",
+        "id": "949af22d-bf35-4156-a8b6-3283333e13ef",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/solicitud-pagina.sppkg"
+  }
+}

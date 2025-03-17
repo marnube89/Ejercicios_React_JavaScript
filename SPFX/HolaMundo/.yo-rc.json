@@ -1,0 +1,21 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "18.20.7",
+    "sdksVersions": {
+      "@microsoft/microsoft-graph-client": "3.0.2",
+      "@microsoft/teams-js": "2.24.0"
+    },
+    "version": "1.20.0",
+    "libraryName": "hola-mundo",
+    "libraryId": "e2ca2cc8-b7a8-42b1-bdf9-204267e24404",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "hola-mundo",
+    "solutionShortDescription": "hola-mundo description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}

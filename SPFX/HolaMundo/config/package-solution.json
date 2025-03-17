@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "hola-mundo-client-side-solution",
+    "id": "e2ca2cc8-b7a8-42b1-bdf9-204267e24404",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.20.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "hola-mundo description"
+      },
+      "longDescription": {
+        "default": "hola-mundo description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "hola-mundo Feature",
+        "description": "The feature that activates elements of the hola-mundo solution.",
+        "id": "429f543f-deb0-4530-ac57-8452cf73eb23",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/hola-mundo.sppkg"
+  }
+}
