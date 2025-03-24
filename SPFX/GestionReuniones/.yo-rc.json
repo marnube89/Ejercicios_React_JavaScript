@@ -1,0 +1,21 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "18.20.7",
+    "sdksVersions": {
+      "@microsoft/microsoft-graph-client": "3.0.2",
+      "@microsoft/teams-js": "2.24.0"
+    },
+    "version": "1.20.0",
+    "libraryName": "gestion-reuniones",
+    "libraryId": "8e8a56d0-9c92-4a47-9698-fc24cdb1f8d2",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "gestion-reuniones",
+    "solutionShortDescription": "gestion-reuniones description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}

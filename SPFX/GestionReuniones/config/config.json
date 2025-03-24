@@ -1,0 +1,19 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "form-gestion-grupos-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/formGestionGrupos/FormGestionGruposWebPart.js",
+          "manifest": "./src/webparts/formGestionGrupos/FormGestionGruposWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "FormGestionGruposWebPartStrings": "lib/webparts/formGestionGrupos/loc/{locale}.js",
+    "ControlStrings": "node_modules/@pnp/spfx-controls-react/lib/loc/{locale}.js"
+  }
+}

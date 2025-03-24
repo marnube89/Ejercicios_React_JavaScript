@@ -1,0 +1,104 @@
+@import '~@fluentui/react/dist/sass/References.scss';
+
+.formGestionGrupos {
+  overflow: hidden;
+  padding: 1em;
+  color: "[theme:bodyText, default: #323130]";
+  color: var(--bodyText);
+  &.teams {
+    font-family: $ms-font-family-fallbacks;
+  }
+}
+
+.component {
+  margin: 0;
+  padding: 5pt;
+}
+
+.form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.form-main {
+  display: flex;
+  justify-content: space-between;
+  gap: 30pt;
+
+  .section-left {
+    display: flex;
+    flex-direction: column;
+    gap: 5pt;
+    width: 50%;
+  }
+  .section-right {
+    display: flex;
+    flex-direction: column;
+    gap: 5pt;
+    width: 50%;
+  }
+}
+.form-footer {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  margin-top: 5pt;
+}
+
+.button-group {
+  display: flex;
+  gap: 2pt;
+}
+
+@media screen and (max-width: 50rem) {
+  .form-header {
+    flex-direction: column;
+    align-items: start;
+    margin-left: 10pt;
+  }
+  .form-footer {
+    margin-right: 10pt;
+  }
+  .form-main {
+    flex-direction: column;
+    margin-left: 10pt;
+    margin-right: 10pt;
+    margin-top: 10pt;
+    .section-left {
+      width: 100%;
+    }
+    .section-right {
+      width: 100%;
+    }
+  }
+
+}
+
+@media screen and (max-width: 35rem) {
+  .button-group {
+    flex-direction: column;
+  }
+}
+.date-picker {
+  float: inline-end;
+  display: flex;
+  flex-direction: column;
+  gap: 5pt;
+  margin-top: 10pt;
+}
+
+
+
+.links {
+  a {
+    text-decoration: none;
+    color: "[theme:link, default:#03787c]";
+    color: var(--link); // note: CSS Custom Properties support is limited to modern browsers only
+
+    &:hover {
+      text-decoration: underline;
+      color: "[theme:linkHovered, default: #014446]";
+      color: var(--linkHovered); // note: CSS Custom Properties support is limited to modern browsers only
+    }
+  }
+}
